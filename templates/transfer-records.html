@@ -104,17 +104,20 @@
                 </td>
               </tr>
             </thead>
+
           </table>
         </div>
       <div class="latest-transfers">
         <table class="top-players">
-          <tr>
-            <td>1. Mbappe</td>
-            <td>{{transfer.old_club}}</td>
-            <td>{{transfer.new_club}}</td>
-            <td>180</td>
-            <td>17/18</td>
+          {% for transfer in transfers %}
+            <tr>
+            <td>{{ transfer.player.ism }}</td>
+            <td>{{transfer.eski}}</td>
+            <td>{{transfer.yangi}}</td>
+            <td>{{ transfer.tah_narx }}</td>
+            <td>{{ transfer.mavsum }}</td>
           </tr>
+            {% endfor %}
         </table>
         <hr>
         <p>It is a list of the most expensive transfers of all time. The minimum transfer value is 50 million euro.</p>

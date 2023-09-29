@@ -22,4 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path("clubs/", clubs),
+    path('u-20', u_20),
+    path('england', england),
+    path('country-clubs', country_clubs),
+    path('players', players),
+    path('transfer-records', transfer_records),
+    path('transfer-archive', transfer_archive),
 ]

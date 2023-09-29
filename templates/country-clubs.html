@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      {% extends 'header.html' %}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="World Top transfers" />
@@ -24,6 +25,7 @@
     <script src="main.js"></script>
   </head>
   <body>
+    {% block content %}
     <div class="container">
       <div class="navbar">
         <div class="country-menu-btn">
@@ -206,6 +208,7 @@
         </a>
       </div>
     </div>
+  {% endblock %}
   </body>
   <script src="js/main.js"></script>
 </html>

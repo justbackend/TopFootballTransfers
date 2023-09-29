@@ -15,7 +15,7 @@ class Club(models.Model):
     def __str__(self):
         return self.nom
 class Player(models.Model):
-    ims = models.CharField(max_length=50)
+    ism = models.CharField(max_length=50)
     pozitsiya = models.CharField(max_length=50)
     club = models.ForeignKey(Club, on_delete=models.CASCADE)
     narx = models.CharField(max_length=50)
@@ -23,7 +23,7 @@ class Player(models.Model):
     t_yil = models.DateField()
 
     def __str__(self):
-        return self.ims
+        return self.ism
 
 class Mavsum(models.Model):
     h_mavsum = models.PositiveIntegerField()
@@ -40,7 +40,7 @@ class Transfer(models.Model):
     mavsum = models.ForeignKey(Mavsum, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.player
+        return self.player.ism
 
 
 
